@@ -1,0 +1,29 @@
+body {
+  background-color: white;
+  padding: 100px;
+  width: 100vw;
+  height: 100vh; }
+  body .container {
+    background-color: green;
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    box-shadow: 0px 0px 5px 0px black inset; }
+    body .container .page-title, body .container .text {
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+      text-shadow: 1px 1px black; }
+    body .container .page-title {
+      font-size: 3.5rem; }
+      body .container .page-title::after {
+        content: '';
+        width: 100%;
+        border-bottom: 2px solid white;
+        display: block;
+        margin-top: 10px; }
+    body .container .text {
+      font-size: 24px; }
