@@ -60,7 +60,7 @@ for (var a = 0; a < data.widget.size; a++) {
     var item = document.createElement('li');
     item.className = 'item item-recommendation';
     item.id = a;
-    item.innerHTML = '<div class="item-image"></div><h3 class="item-name"></h3><p class="item-old-price">De: <span class="value"></span></p><p class="item-price">Por: <span class="value"></span></p><p class="item-payment"></p>'
+    item.innerHTML = '<div class="item-image"></div><h3 class="item-name"></h3><p class="item-old-price">De: <span class="value"></span></p><p class="item-price">Por: <span class="value"></span></p><p class="item-payment"></p><div class="cart-button"><p class="button-label">adicionar ao carrinho</p><i class="material-icons">add_shopping_cart</i></div>'
     var recommended = document.getElementsByClassName('items-list');
     recommended[0].appendChild(item);
 }

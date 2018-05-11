@@ -4,9 +4,14 @@
     border: 1px solid #efeeee
     box-sizing: border-box
     padding: 20px !important
+    position: relative
 
     &:hover
         background: linear-gradient(whitesmoke, white)
+        height: 380px
+
+        .cart-button
+            display: block
 
     .item-image
         width: 120px
@@ -31,3 +36,51 @@
             color: #000
             font-family: roboto-bold, Arial, Helvetica, sans-serif
             font-size: inherit
+
+    .item-price
+        .value
+            font-size: 20px
+
+    .cart-button
+        position: absolute
+        margin: auto
+        display: none
+        width: 200px
+        height: 40px
+        bottom: 20px
+        left: 0
+        right: 0
+        border: 1px solid #c7c7c7
+        line-height: 35px
+        text-align: center
+
+        *
+            transition: all 0.3s
+
+        .button-label, i
+            display: inline-block
+            vertical-align: middle
+            line-height: normal
+            color: #000
+
+        .button-label
+            font-family: roboto-bold, Arial, Helvetica, sans-serif
+
+        &:hover
+            cursor: pointer !important
+            
+            .button-label
+                margin-left: 5px
+
+            i
+                color: orange
+
+            &::before
+                content: ''
+                display: inline-block
+                position: absolute
+                left: -1px
+                top: -1px
+                width: 8px
+                height: 42px
+                background-color: orange
