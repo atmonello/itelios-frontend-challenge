@@ -1,9 +1,9 @@
 .item
     width: 240px
-    height: 400px
+    height: 320px
     border: 1px solid #efeeee
     box-sizing: border-box
-    padding: 20px
+    padding: 20px !important
 
     &:hover
         background: linear-gradient(whitesmoke, white)
@@ -12,4 +12,21 @@
         width: 120px
         height: 120px
         background-color: purple
-        margin: 0 40px
+        margin: 0 40px 20px
+
+    .item-name
+        color: rgb(100, 100, 100)
+        display: block
+        display: -webkit-box
+        max-width: 90%
+        height: 48px
+        -webkit-line-clamp: 3
+        -webkit-box-orient: vertical
+        overflow: hidden
+        text-overflow: ellipsis
+
+    .item-old-price, .item-price
+        margin: 10px 0
+        .value
+            color: #000
+            font-family: roboto-bold, Arial, Helvetica, sans-serif

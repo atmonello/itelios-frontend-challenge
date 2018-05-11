@@ -1,16 +1,31 @@
 .item {
   width: 240px;
-  height: 400px;
+  height: 320px;
   border: 1px solid #efeeee;
   box-sizing: border-box;
-  padding: 20px; }
+  padding: 20px !important; }
   .item:hover {
     background: linear-gradient(whitesmoke, white); }
   .item .item-image {
     width: 120px;
     height: 120px;
     background-color: purple;
-    margin: 0 40px; }
+    margin: 0 40px 20px; }
+  .item .item-name {
+    color: #646464;
+    display: block;
+    display: -webkit-box;
+    max-width: 90%;
+    height: 48px;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+  .item .item-old-price, .item .item-price {
+    margin: 10px 0; }
+    .item .item-old-price .value, .item .item-price .value {
+      color: #000;
+      font-family: roboto-bold, Arial, Helvetica, sans-serif; }
 
 @font-face {
   font-weight: normal;
@@ -30,15 +45,25 @@
   font-family: "roboto-bold-condensed";
   src: url("fonts/roboto-bold-condensed.ttf") format("truetype"), url("fonts/roboto-bold-condensed.svg#roboto-bold-condensed") format("svg"), url("fonts/roboto-bold-condensed.eot"), url("fonts/roboto-bold-condensed.woff") format("woff"); }
 
+body * {
+  font-family: roboto-regular, Arial, Helvetica, sans-serif;
+  color: #969696;
+  font-size: 12px;
+  line-height: 16px; }
+
 .title {
   font-family: roboto-bold, Arial, Helvetica, sans-serif;
-  color: dimgray; }
+  font-size: 30px;
+  color: dimgray;
+  margin-bottom: 15px; }
 
 .viewed, .recommended {
-  float: left; }
+  float: left;
+  margin-top: 50px; }
 
 .viewed {
-  max-width: 240px; }
+  max-width: 240px;
+  margin-left: 50px; }
 
 .recommended {
   max-width: 720px; }
