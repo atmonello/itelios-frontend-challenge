@@ -19,7 +19,6 @@
     color: #646464;
     display: block;
     display: -webkit-box;
-    max-width: 90%;
     height: 48px;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;

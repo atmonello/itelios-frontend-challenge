@@ -14,7 +14,6 @@ getJSON = function(url) {
             if (xhr.status == 200) {
                 parsed = JSON.parse(xhr.responseText);
                 data = parsed[0].data;
-                // console.log(data);
             } 
         }
     };
@@ -22,10 +21,11 @@ getJSON = function(url) {
 };
 
 getJSON('assets/js/products.json');
-console.log(data);
 
+// Gets viewed item element...
 var viewedItem = document.getElementsByClassName('item-viewed');
 
+// ... and sets its name, old price, current price and payment info
 var viewedItemName = viewedItem[0].querySelector('.item-name');
 viewedItemName.innerText = data.item.name;
 
@@ -37,25 +37,24 @@ viewedItemCurrentPrice.innerText = data.item.price;
 
 var viewedItemPayment = viewedItem[0].querySelector('.item-payment');
 
+// Used to get the payment info PRICE separated from other text
 var viewedItemPaymentStrings = [
     data.item.productInfo.paymentConditions.slice(0, (data.item.productInfo.paymentConditions.indexOf('é ') + 2)), 
     data.item.productInfo.paymentConditions.slice((data.item.productInfo.paymentConditions.indexOf('é ') + 2), data.item.productInfo.paymentConditions.indexOf(' s')),
     data.item.productInfo.paymentConditions.slice(data.item.productInfo.paymentConditions.indexOf(' s'), data.item.productInfo.paymentConditions.length)
 ];
 
-// console.log(viewedItemPaymentStrings);
 
 for (var str = 0; str < viewedItemPaymentStrings.length; str++) {
     if (str == 1) {
         viewedItemPayment.innerHTML += '<span class="value">' + viewedItemPaymentStrings[str] + '</span>';
-        // console.log(viewedItemPaymentValue);
-        console.log(viewedItemPaymentStrings[str]);
     }
     else {
         viewedItemPayment.innerHTML += viewedItemPaymentStrings[str];
     }
 }
 
+// Adds recommended items to the recommended items list
 for (var a = 0; a < data.widget.size; a++) {
     var item = document.createElement('li');
     item.className = 'item item-recommendation';
@@ -65,10 +64,9 @@ for (var a = 0; a < data.widget.size; a++) {
     recommended[0].appendChild(item);
 }
 
+// Gets all the recommended items from the recommended items list
 var recommendedItems = document.querySelectorAll('.items-list .item-recommendation');
 for (var b = 0; b < recommendedItems.length; b++) {
-    // var recommendedImage = recommendedItems[b].querySelector('.item-image');
-    // recommendedImage.style.backgroundImage = 'url(' + data.recommendation[b].imageName + ')';
 
     var recommendedName = recommendedItems[b].querySelector('.item-name');
     recommendedName.innerText = data.recommendation[b].name;
@@ -96,16 +94,16 @@ for (var b = 0; b < recommendedItems.length; b++) {
     for (var str = 0; str < recommendedItemPaymentStrings.length; str++) {
         if (str == 1) {
             recommendedItemPayment.innerHTML += '<span class="value">' + recommendedItemPaymentStrings[str] + '</span>';
-            // console.log(viewedItemPaymentValue);
-            console.log(recommendedItemPaymentStrings[str]);
         }
         else {
             recommendedItemPayment.innerHTML += recommendedItemPaymentStrings[str];
         }
     }
-
 }
 
+// Tiny Slide starter function
+// Vanilla JS slider lib used to draw items carousel
+// https://github.com/ganlanyuan/tiny-slider
 var slider = tns({
     container: '.items-list',
     items: 3,
