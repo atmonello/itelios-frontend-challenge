@@ -14,6 +14,6 @@ De qualquer maneira, no pouco tempo que tive pra fazer o desafio, gastei a maior
 
 Acabei utilizando uma library de Vanilla JS para implementar o carrosel dos produtos, mas pelo menos me limitei a não usar jQuery, GreenSock e nenhuma outra biblioteca ou framework que estou acostumado a usar no dia-a-dia. Os links das imagens parecem estar quebrados, então não consegui utilizá-las.
 
-Enfim, para executar o projeto, basta clicar ![aqui](https://atmonello.github.io/itelios-frontend-challenge/), ou clicar no link ao lado do nome do repositório. 
+Enfim, para executar o projeto, basta clicar [aqui](https://atmonello.github.io/itelios-frontend-challenge/), ou clicar no link ao lado do nome do repositório. 
 
 Valeu! **<3**
