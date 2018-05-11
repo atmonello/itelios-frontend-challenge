@@ -39,7 +39,7 @@ body
             left: 0
             right: 0
             margin: auto
-            width: 200px
+            width: 80px
 
             button
                 border: 5px solid #b5b5b5
@@ -49,3 +49,49 @@ body
 
                 &.tns-nav-active
                     border-color: #000
+
+@media only screen and (max-width: 1000px)
+    .viewed, .recommended
+        float: none
+
+    .viewed
+        position: absolute
+        margin: auto
+        top: 50px
+        left: 0
+        right: 0
+    
+    .recommended
+        position: absolute
+        top: 420px
+        left: 0
+        right: 0
+        margin: auto
+
+@media only screen and (max-width: 730px)
+    body
+        *
+            font-size: 10px
+
+    .recommended
+        max-width: 500px
+
+        .item
+            .item-image
+                margin: -10px 25px 10px
+
+        .tns-outer
+            .tns-nav
+                width: 100px
+
+
+@media only screen and (max-width: 520px)
+    .recommended
+        max-width: 360px
+
+@media only screen and (max-width: 380px)
+    .recommended
+        max-width: 200px
+
+        .title
+            line-height: 25px

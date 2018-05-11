@@ -87,3 +87,38 @@
         
         &:active
             transform: scale(0.95)
+
+@media only screen and (max-width: 730px)
+    .item
+        height: 240px
+
+        &:hover
+            height: 260px
+
+        .item-image
+            width: 80px
+            height: 80px
+            margin: -10px 55px 10px
+
+        .item-name
+            height: 32px
+            -webkit-line-clamp: 2
+
+        .item-old-price, .item-price, .item-payment
+            margin: 5px 0
+
+        .item-price
+            .value
+                font-size: 16px
+
+        .cart-button
+            width: 180px
+            height: 30px
+            bottom: 10px
+            line-height: 28px
+
+            &:hover
+                &::before
+                    height: 31px
+
+

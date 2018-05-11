@@ -110,4 +110,18 @@ var slider = tns({
     slideBy: 'page',
     autoplay: false,
     controls: false,
+    responsive: {
+        200: {
+            items: 1,
+            fixedWidth: 200
+        },
+        450: {
+            items: 2,
+            fixedWidth: false 
+        },
+        650: {
+            items: 3
+        }
+    }
 });
+

@@ -72,6 +72,30 @@
     .item .cart-button:active {
       transform: scale(0.95); }
 
+@media only screen and (max-width: 730px) {
+  .item {
+    height: 240px; }
+    .item:hover {
+      height: 260px; }
+    .item .item-image {
+      width: 80px;
+      height: 80px;
+      margin: -10px 55px 10px; }
+    .item .item-name {
+      height: 32px;
+      -webkit-line-clamp: 2; }
+    .item .item-old-price, .item .item-price, .item .item-payment {
+      margin: 5px 0; }
+    .item .item-price .value {
+      font-size: 16px; }
+    .item .cart-button {
+      width: 180px;
+      height: 30px;
+      bottom: 10px;
+      line-height: 28px; }
+      .item .cart-button:hover::before {
+        height: 31px; } }
+
 @font-face {
   font-weight: normal;
   font-style: normal;
@@ -120,7 +144,7 @@ body * {
       left: 0;
       right: 0;
       margin: auto;
-      width: 200px; }
+      width: 80px; }
       .recommended .tns-outer .tns-nav button {
         border: 5px solid #b5b5b5;
         border-radius: 10px;
@@ -128,3 +152,39 @@ body * {
         margin: 0 5px; }
         .recommended .tns-outer .tns-nav button.tns-nav-active {
           border-color: #000; }
+
+@media only screen and (max-width: 1000px) {
+  .viewed, .recommended {
+    float: none; }
+  .viewed {
+    position: absolute;
+    margin: auto;
+    top: 50px;
+    left: 0;
+    right: 0; }
+  .recommended {
+    position: absolute;
+    top: 420px;
+    left: 0;
+    right: 0;
+    margin: auto; } }
+
+@media only screen and (max-width: 730px) {
+  body * {
+    font-size: 10px; }
+  .recommended {
+    max-width: 500px; }
+    .recommended .item .item-image {
+      margin: -10px 25px 10px; }
+    .recommended .tns-outer .tns-nav {
+      width: 100px; } }
+
+@media only screen and (max-width: 520px) {
+  .recommended {
+    max-width: 360px; } }
+
+@media only screen and (max-width: 380px) {
+  .recommended {
+    max-width: 200px; }
+    .recommended .title {
+      line-height: 25px; } }
