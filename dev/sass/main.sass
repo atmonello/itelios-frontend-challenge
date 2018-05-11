@@ -1,6 +1,7 @@
 @charset 'utf-8'
 
 @import mixin
+@import item
 
 +webfont(roboto-regular)
 +webfont(roboto-bold)
@@ -11,11 +12,29 @@
     color: dimgray
 
 .viewed, .recommended
-    display: inline-block
+    float: left
 
-.item
-    width: 200px
-    height: 600px
+.viewed
+    max-width: 240px
 
-    &:hover
-        background-color: whitesmoke
+.recommended
+    max-width: 720px
+
+    .tns-outer
+        position: relative
+        .tns-nav
+            position: absolute
+            bottom: -40px
+            left: 0
+            right: 0
+            margin: auto
+            width: 200px
+
+            button
+                border: 5px solid #b5b5b5
+                border-radius: 10px
+                padding: 0
+                margin: 0 5px
+
+                &.tns-nav-active
+                    border-color: #000

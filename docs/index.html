@@ -8,18 +8,30 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Main style CSS -->
     <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
+
+    <!-- Vanilla JS Carousel -->
+    <link rel="stylesheet" type="text/css" href="assets/css/libs/tiny-slider.css" />
 </head>
 <body>
     <div class="viewed">
         <h2 class="title">Você visitou:</h2>
-        <div class="item"></div>
+        <div class="item">
+            <div class="item-image"></div>
+            <h3 class="item-name"></h3>
+            <p class="item-old-price">De: <span class="value"></span></p>
+            <p class="item-price">Por: <span class="value"></span></p>
+            <p class="item-payment"><span class="value"></span></p>
+        </div>
     </div>
     <div class="recommended">
         <h2 class="title">e talvez se interesse por:</h2>
-        <div class="items-list"></div>
+        <div class="items-list">
+        </div>
     </div>
 
+    <script type="text/javascript" src="assets/js/libs/tiny-slider.js"></script>
     <script type="text/javascript" src="assets/js/script.js"></script>
 </body>
 </html>
