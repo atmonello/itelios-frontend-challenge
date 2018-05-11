@@ -43,7 +43,8 @@
     right: 0;
     border: 1px solid #c7c7c7;
     line-height: 35px;
-    text-align: center; }
+    text-align: center;
+    user-select: none; }
     .item .cart-button * {
       transition: all 0.3s; }
     .item .cart-button .button-label, .item .cart-button i {
@@ -68,6 +69,8 @@
         width: 8px;
         height: 42px;
         background-color: orange; }
+    .item .cart-button:active {
+      transform: scale(0.95); }
 
 @font-face {
   font-weight: normal;
