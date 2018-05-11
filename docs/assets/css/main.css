@@ -21,11 +21,12 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis; }
-  .item .item-old-price, .item .item-price {
+  .item .item-old-price, .item .item-price, .item .item-payment {
     margin: 10px 0; }
-    .item .item-old-price .value, .item .item-price .value {
+    .item .item-old-price .value, .item .item-price .value, .item .item-payment .value {
       color: #000;
-      font-family: roboto-bold, Arial, Helvetica, sans-serif; }
+      font-family: roboto-bold, Arial, Helvetica, sans-serif;
+      font-size: inherit; }
 
 @font-face {
   font-weight: normal;
